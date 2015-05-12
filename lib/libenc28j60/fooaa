@@ -1,0 +1,6 @@
+arm-none-eabi-gcc -Wall -W -Wshadow -Wwrite-strings -Winline -O2 -finline -finline-functions-called-once  -fno-strict-aliasing -I . -I ../STM32F10x_StdPeriph_Driver/inc -I ../CMSIS_CM3/ -DSTM32F10X_LD  -mcpu=cortex-m3 -mthumb -c -o Retarget.o Retarget.c
+arm-none-eabi-gcc -Wall -W -Wshadow -Wwrite-strings -Winline -O2 -finline -finline-functions-called-once  -fno-strict-aliasing -I . -I ../STM32F10x_StdPeriph_Driver/inc -I ../CMSIS_CM3/ -DSTM32F10X_LD  -mcpu=cortex-m3 -mthumb -c -o enc28j60.o enc28j60.c
+arm-none-eabi-gcc -Wall -W -Wshadow -Wwrite-strings -Winline -O2 -finline -finline-functions-called-once  -fno-strict-aliasing -I . -I ../STM32F10x_StdPeriph_Driver/inc -I ../CMSIS_CM3/ -DSTM32F10X_LD  -mcpu=cortex-m3 -mthumb -c -o ip_arp_udp_tcp.o ip_arp_udp_tcp.c
+arm-none-eabi-gcc -Wall -W -Wshadow -Wwrite-strings -Winline -O2 -finline -finline-functions-called-once  -fno-strict-aliasing -I . -I ../STM32F10x_StdPeriph_Driver/inc -I ../CMSIS_CM3/ -DSTM32F10X_LD  -mcpu=cortex-m3 -mthumb -c -o simple_server.o simple_server.c
+arm-none-eabi-gcc -Wall -W -Wshadow -Wwrite-strings -Winline -O2 -finline -finline-functions-called-once  -fno-strict-aliasing -I . -I ../STM32F10x_StdPeriph_Driver/inc -I ../CMSIS_CM3/ -DSTM32F10X_LD  -mcpu=cortex-m3 -mthumb -c -o spi.o spi.c
+arm-none-eabi-ar cr libenc28j60.a Retarget.o enc28j60.o ip_arp_udp_tcp.o simple_server.o spi.o
